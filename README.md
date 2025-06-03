@@ -26,7 +26,19 @@ The `historical_transactions.csv` file is too large to be stored in this reposit
 - month_lag: Month lag of the purchase
 - subsector_id: Subsector of the merchant
 
-Please contact the project maintainers to obtain access to the full dataset.
+### Downloading the Data
+
+The historical transactions data is stored on Google Drive. To download it:
+
+1. Install the required package:
+   ```bash
+   pip install gdown
+   ```
+
+2. Run the download script:
+   ```bash
+   python scripts/download_data.py
+   ```
 
 ## Setup
 
@@ -34,11 +46,13 @@ Please contact the project maintainers to obtain access to the full dataset.
 2. Obtain the required data files
 3. Install the required Python packages:
    ```bash
-   pip install pandas numpy matplotlib seaborn
+   pip install pandas numpy matplotlib seaborn gdown
    ```
 
 ## Project Structure
 
 - `analysis.ipynb`: Jupyter notebook containing the data analysis
 - `data/`: Directory containing the data files
+- `scripts/`: Directory containing utility scripts
+  - `download_data.py`: Script to download the historical transactions data
 - `*.py`: Python scripts for data processing and analysis
