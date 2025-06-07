@@ -9,6 +9,7 @@ The following data files are required for the project:
 - `data/train.csv`: Training data with loyalty scores
 - `data/test.csv`: Test data for predictions
 - `data/historical_transactions.csv`: Historical transaction data (large file)
+- `data/new_merchant_transactions.csv`: New merchant transaction data (large file)
 
 ### Historical Transactions Data
 
@@ -28,7 +29,7 @@ The `historical_transactions.csv` file is too large to be stored in this reposit
 
 ### Downloading the Data
 
-The historical transactions data is stored on Google Drive. To download it:
+The historical and new merchant transactions data are stored on Google Drive. The download script will **skip downloading any file that already exists** in the `data/` directory.
 
 1. Install the required package:
    ```bash
@@ -39,6 +40,7 @@ The historical transactions data is stored on Google Drive. To download it:
    ```bash
    python scripts/download_data.py
    ```
+   This will download both `historical_transactions.csv` and `new_merchant_transactions.csv` if they are not already present in the `data/` directory.
 
 ## Setup
 
@@ -54,5 +56,5 @@ The historical transactions data is stored on Google Drive. To download it:
 - `analysis.ipynb`: Jupyter notebook containing the data analysis
 - `data/`: Directory containing the data files
 - `scripts/`: Directory containing utility scripts
-  - `download_data.py`: Script to download the historical transactions data
+  - `download_data.py`: Script to download the historical and new merchant transactions data (skips files that already exist)
 - `*.py`: Python scripts for data processing and analysis
